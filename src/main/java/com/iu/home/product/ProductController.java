@@ -46,6 +46,13 @@ public class ProductController extends HttpServlet {
 		System.out.println("URI : " + uri);
 		
 		if(uri.equals("list.do")) {
+			try {
+				List<ProductDTO> ar = productService.getProductList();
+				request.setAttribute("list", ar);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			uri = "productList.jsp";
 			System.out.println("list");
 		} else if(uri.equals("add.do")) {
@@ -57,6 +64,18 @@ public class ProductController extends HttpServlet {
 		} else if(uri.equals("delete.do")) {
 			System.out.println("delete");
 		} else if(uri.equals("detail.do")) {
+			
+			Long ProductNum = Long.parseLong(request.getParameter("productNum"));
+			
+			productDTO.setProductNum(ProductNum);
+			
+			try {
+				productDTO = productService.getProductDetail(productDTO);
+				
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			uri = "productDetail.jsp";
 			System.out.println("detail");
 		} else {
