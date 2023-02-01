@@ -28,7 +28,7 @@ public class MemberController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Hello HS");
+		System.out.println("Member Page");
 		
 		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/member/member.jsp");
 		view.forward(request, response);

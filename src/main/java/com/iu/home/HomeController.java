@@ -30,7 +30,7 @@ public class HomeController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Hello HS");
+//		System.out.println("Home Page");
 //		String method = request.getMethod();
 //		StringBuffer sb = request.getRequestURL();
 //		String uri = request.getRequestURI();

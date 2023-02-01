@@ -9,6 +9,11 @@ public class ProductService {
 		this.productDAO = new ProductDAO();
 	}
 	
+	public List<ProductDTO> getProductList() throws Exception {
+		return productDAO.getProductList();
+	}
+	
+	
 	public int setAddProduct(ProductDTO productDTO, List<ProductOptionDTO> ar) throws Exception {
 		//product, option 
 		Long productNum = productDAO.getProductNum();
