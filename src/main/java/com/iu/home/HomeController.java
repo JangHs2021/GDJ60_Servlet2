@@ -30,7 +30,18 @@ public class HomeController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		System.out.println("Home Page");
+		System.out.println("Home Page");
+		
+		Soldier soldier = new Soldier();
+		Gun gun = new Gun();
+		Bullet bullet = new Bullet();
+		
+		gun.setBullet(bullet);
+		
+		soldier.setGun(gun);
+		
+		soldier.useGun();
+		
 //		String method = request.getMethod();
 //		StringBuffer sb = request.getRequestURL();
 //		String uri = request.getRequestURI();
